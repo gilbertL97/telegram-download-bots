@@ -1,7 +1,10 @@
 const {Telegraf} = require('telegraf');
+require('dotenv').config()
 
-const bot = new Telegraf('6489318466:AAEwOa9JryBk9ALe-RrkvTMqABmQvI_Egrc'); // Reemplaza BOT_TOKEN con el token de tu bot.
+
+const bot = new Telegraf(process.env.TOKEN); // Reemplaza BOT_TOKEN con el token de tu bot.
 console.log('bots corriendo...');
+bot.start((ctx) => ctx.reply('Welcome'))
 bot.start((ctx) => ctx.reply('¡Bienvenido! Envíame un archivo y te proporcionaré un enlace de descarga.'));
 
 bot.on('document', async (ctx) => {
