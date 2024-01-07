@@ -9,8 +9,9 @@ const bot = new Telegraf(process.env.TOKEN); // Reemplaza BOT_TOKEN con el token
 console.log('bots corriendo...');
 bot.start((ctx) => ctx.reply('¡Habla Figura que Hay! Asere , Gilbert me dijo que tienes Bateo con la descarga en telegram Envíame un archivo y te proporcionaré un enlace de descarga.'));
 bot.command('quehay', (ctx) => ctx.reply(`Bueno mi herman@ proximamente lo que viene es tiza \n
-1-Es q me envies un link de telegram pa que puedas descargar los videos de Oscar (l-ment)\n
-2-Des pues los de youtube pa que descarguen sus cositas`))
+1-Es q me envies un link de instagram pa que puedas descargar los videos de Oscar (l-ment)\n
+2-Despues los de youtube pa que descarguen sus cositas\n
+3-todo lo que les haga falta me lo piden 😉`))
 bot.on('document', async (ctx) => {
     try {
         const link = await ctx.telegram.getFileLink(ctx.message.document.file_id);
